@@ -1,0 +1,2 @@
+Time Complexity is O(n^2)
+Space Complexity is O(n^n) as there can be n folders inside n folders and so on
