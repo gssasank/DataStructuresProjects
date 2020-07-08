@@ -1,0 +1,2 @@
+All the operations take constant time [O(1)], as specified in the question.
+Space complexity is O(N)
