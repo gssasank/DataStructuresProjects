@@ -59,7 +59,6 @@ class LRU_Cache(object):
         self.cache = dict()
 
     def get(self, key):
-        # Retrieve item from provided key. Return -1 if nonexistent.
         node = self.cache.get(key)
 
         if node is None:
@@ -70,7 +69,6 @@ class LRU_Cache(object):
         return node.value
 
     def set(self, key, value):
-        # Set the value if the key is not present in the cache. If the cache is at capacity remove the oldest item.
         node = self.cache.get(key)
 
         if node:
@@ -101,5 +99,5 @@ print(our_cache.get(9))  # returns NOT PRESENT!!! because 9 is not present in th
 our_cache.set(5, 5)
 our_cache.set(6, 6)
 
-print(our_cache.get(3))  # returns NOT PRESENT!!! because the cache reached it's capacity and 3 was the least
-# recently used entry
+print(our_cache.get(3))  # returns NOT PRESENT!!! because the cache reached it's capacity and 3 was the least recently used entry
+
