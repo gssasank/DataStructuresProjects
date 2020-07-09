@@ -95,7 +95,7 @@ class HuffmanTree:
     def create_new_tree(self):
         if self.data == '':
             print("Please enter a non-empty string!!")
-            raise ValueError("Please enter a non-empty string!!")
+            
         frequency_map = self.create_frequency_distribution()
         node_deque = create_new_node(frequency_map)
         self.root = connect_nodes(node_deque)
@@ -164,18 +164,21 @@ def huffman_decoding_recursive(codex, root, child, data, index):
 
 
 def testing_function(a_great_sentence="The bird is the word"):
-    print("The size of the data is: {}\n".format(sys.getsizeof(a_great_sentence)))
-    print("The content of the data is: {}\n".format(a_great_sentence))
-    print("================================================================")
-    encoded_data, tree = huffman_encoding(a_great_sentence)
+    if a_great_sentence == "":
+        print("Please enter a non-empty string!!")
+    else:   
+        print("The size of the data is: {}\n".format(sys.getsizeof(a_great_sentence)))
+        print("The content of the data is: {}\n".format(a_great_sentence))
+        print("================================================================")
+        encoded_data, tree = huffman_encoding(a_great_sentence)
 
-    print("The size of the encoded data is: {}\n".format(sys.getsizeof(int(encoded_data, base=2))))
-    print("The content of the encoded data is: {}\n".format(encoded_data))
-    print("================================================================")
-    decoded_data = huffman_decoding(encoded_data, tree)
+        print("The size of the encoded data is: {}\n".format(sys.getsizeof(int(encoded_data, base=2))))
+        print("The content of the encoded data is: {}\n".format(encoded_data))
+        print("================================================================")
+        decoded_data = huffman_decoding(encoded_data, tree)
 
-    print("The size of the decoded data is: {}\n".format(sys.getsizeof(decoded_data)))
-    print("The content of the encoded data is: {}\n".format(decoded_data))
+        print("The size of the decoded data is: {}\n".format(sys.getsizeof(decoded_data)))
+        print("The content of the encoded data is: {}\n".format(decoded_data))
 
 
 print("==========^^^^^^^^^^ DEFAULT TEST ^^^^^^^^^^===========")
@@ -186,4 +189,6 @@ print("==========^^^^^^^^^^ TEST 2 ^^^^^^^^^^===========")
 testing_function("aaaaaa")
 print("==========^^^^^^^^^^ TEST 3 ^^^^^^^^^^===========")
 testing_function("Bears, beets, Battlestar Galactica")
+print("==========^^^^^^^^^^ TEST 4 ^^^^^^^^^^===========")
+testing_function("")
 
