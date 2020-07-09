@@ -1,3 +1,3 @@
-Time Complexity is O(n^2)
+Time Complexity is O(n), since we can consider the file hierarchy as a tree and recursive DFS takes linear time.
 Space Complexity is O(n^n) as there can be n folders inside n folders and so on.
 I have used recursion to travel through all the folders, which completely eliminates the need for loops.
