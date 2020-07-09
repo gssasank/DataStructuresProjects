@@ -1,2 +1,4 @@
-Time Complexity is O(n^2)
+Time Complexity is O(n*logn)
 Space Complexity is O(n)
+I used a tree data structure with a few additional attributes in the node of tree to accomodate the element ad frequency attributes.
+I improvised the basic tree structure taught in the exercises and implemented all the functions.
