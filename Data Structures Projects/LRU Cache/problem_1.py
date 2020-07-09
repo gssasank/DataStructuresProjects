@@ -69,6 +69,9 @@ class LRU_Cache(object):
         return node.value
 
     def set(self, key, value):
+        if self.capacity == 0:
+            print("Cache capacity is zero, cannot add new elements!")
+            return
         node = self.cache.get(key)
 
         if node:
@@ -85,6 +88,8 @@ class LRU_Cache(object):
         self.rate_of_usage.insert_node(new_node)
 
 
+print("========== TEST 1 ==========")
+
 our_cache = LRU_Cache(5)
 
 our_cache.set(1, 1)
@@ -99,5 +104,25 @@ print(our_cache.get(9))  # returns NOT PRESENT!!! because 9 is not present in th
 our_cache.set(5, 5)
 our_cache.set(6, 6)
 
-print(our_cache.get(3))  # returns NOT PRESENT!!! because the cache reached it's capacity and 3 was the least recently used entry
+print(our_cache.get(3))  # returns NOT PRESENT!!! because the cache reached it's capacity and 3 was the least
+# recently used entry
 
+print("========== TEST 2 ==========")
+
+test_cache = LRU_Cache(3)
+
+test_cache.set(1, 1)
+test_cache.set(2, 2)
+test_cache.set(3, 3)
+
+print(test_cache.get(1))  
+print(test_cache.get(2))
+print(test_cache.get(9))  
+
+
+print(test_cache.get(3))  
+
+
+print("========== TEST 3 ==========")
+test_2_cache = LRU_Cache(0)
+test_2_cache.set(1, 1)
