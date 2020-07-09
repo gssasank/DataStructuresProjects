@@ -1,2 +1,4 @@
 Time Complexity is O(n)
 Space Complexity is O(n)
+For the implementation of union of sets I used a simple set data structure to get the union.
+For the implementation of intersection of sets I used the in-bulit set method intersection() and append the data into a list.
