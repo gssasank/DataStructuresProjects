@@ -1,2 +1,5 @@
 All the operations take constant time [O(1)], as specified in the question.
-Space complexity is O(N)
+Space complexity is O(n).
+I used a doubly linked list to implement the cache function, where the head is the most recent element 
+and the tail is the least recently used element. Since it is a doublylinked list we can add new elements to the
+head in constant time and also  remove the element in the tail in constant time.
