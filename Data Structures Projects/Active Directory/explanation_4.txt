@@ -1,4 +1,4 @@
-Time Complexity of this recursive function is O(n^2)
+Time Complexity is O(n), since we can consider the file hierarchy as a tree and recursive DFS takes linear time.
 Space Complexity is O(n)
 Like the file recursion problem I used recursion to travel through the hierarchy tree and check whether 
 a particular user exists in a user group or not.
