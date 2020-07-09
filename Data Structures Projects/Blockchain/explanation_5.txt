@@ -1,2 +1,4 @@
 Time Complexity is O(n)
 Space Complexity is O(n)
+I used a linked list in this problem, the given template was used as it is with a few modifications like adding a next attribute in
+the data structure to traverse the linked list.
