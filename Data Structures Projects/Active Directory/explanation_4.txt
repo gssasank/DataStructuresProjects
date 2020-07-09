@@ -1,2 +1,4 @@
 Time Complexity of this recursive function is O(n^2)
 Space Complexity is O(n)
+Like the file recursion problem I used recursion to travel through the hierarchy tree and check whether 
+a particular user exists in a user group or not.
