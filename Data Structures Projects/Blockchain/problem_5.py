@@ -56,8 +56,7 @@ class Blockchain:
 
 
 republican_presidents = Blockchain()
-# One edge case: printing empty chain
-republican_presidents.print_chain()
+
 republican_presidents.new_block("Donald J Trump")
 republican_presidents.new_block("George W Bush")
 republican_presidents.new_block("George HW Bush")
@@ -65,3 +64,19 @@ republican_presidents.new_block("Ronald Reagan")
 republican_presidents.new_block("Gerald Ford")
 republican_presidents.new_block("Richard Nixon")
 republican_presidents.print_chain()
+
+print("\n==================================================\n")
+
+empty_blockchain = Blockchain()
+empty_blockchain.print_chain()
+
+print("\n==================================================\n")
+
+sylvester_stallone_movies = Blockchain()
+sylvester_stallone_movies.new_block("Rambo")
+sylvester_stallone_movies.new_block("Rocky")
+sylvester_stallone_movies.new_block("Creed")
+sylvester_stallone_movies.new_block("Escape Plan")
+sylvester_stallone_movies.new_block("Judge Dredd")
+sylvester_stallone_movies.new_block("Expendables")
+sylvester_stallone_movies.print_chain()
